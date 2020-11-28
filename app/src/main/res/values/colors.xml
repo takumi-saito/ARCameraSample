@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#e0e0e0</color>
+    <color name="colorPrimaryDark">#aeaeae</color>
+    <color name="colorPrimaryLight">#f9f9f9</color>
+    <color name="colorAccent">@color/colorWildBunch</color>
+    <color name="colorAccentLight">@color/colorWildBunchLight</color>
+    <color name="colorBackground">#ffffff</color>
+    <color name="textColorPrimary">#000000</color>
+    <color name="colorText">#000000</color>
+
+    <color name="colorWildBunch">#0081cc</color>
+    <color name="colorWildBunchLight">#07ddf3</color>
+    <color name="colorWildBunchPressed">#3ba4e2</color>
+    <!-- toolbar bar -->
+    <color name="toolbar_background">@color/colorPrimaryLight</color>
+
+    <!-- item ripple effect color-->
+    <color name="colorControlHighlight">@color/colorPrimaryDark</color>
+
+    <color name="transparent_background">#00000000</color>
+    <color name="transparent_background_white">#88ffffff</color>
+    <color name="link">#0033cc</color>
+
+    <!-- text -->
+    <color name="base_text_color">#777777</color>
+    <color name="arrow_icon_color">#777777</color>
+</resources>

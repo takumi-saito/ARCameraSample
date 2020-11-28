@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">ARカメラ</string>
+
+    <string name="toolbar_title_settings">アプリについて</string>
+    <string name="toolbar_title_pictures">アルバム</string>
+    <string name="toolbar_title_terms">@string/settings_item_title_terms</string>
+    <string name="toolbar_title_privacy_policy">@string/settings_item_title_privacy_policy</string>
+    <string name="toolbar_title_license">@string/settings_item_title_app_license</string>
+    <string name="close">閉じる</string>
+
+    <string name="settings_item_title_how_to">使い方</string>
+    <string name="settings_item_title_survey">アンケート</string>
+    <array name="settings_item_titles">
+        <item>@string/settings_item_title_how_to</item>
+        <item>@string/settings_item_title_survey</item>
+        <item>@string/settings_item_title_terms</item>
+        <item>@string/settings_item_title_privacy_policy</item>
+        <item>@string/settings_item_title_app_license</item>
+    </array>
+    <string name="settings_item_title_terms">利用規約</string>
+    <string name="settings_item_title_privacy_policy">プライバシーポリシー</string>
+    <string name="settings_item_title_app_license">ライセンス</string>
+
+    <string name="dialog_title_confirm">確認</string>
+    <string name="dialog_title_to_play_store">Playストアに移動する</string>
+    <string name="dialog_label_yes">はい</string>
+    <string name="dialog_label_no">いいえ</string>
+    <string name="dialog_cancel">キャンセル</string>
+    <string name="dialog_delete">削除</string>
+    <string name="dialog_title_arcore_not_installed">@string/dialog_title_to_play_store</string>
+    <string name="dialog_message_arcore_not_installed">アプリをご利用になるにはARCoreのインストールが必要になります。</string>
+    <string name="dialog_title_arcore_apk_old">@string/dialog_title_to_play_store</string>
+    <string name="dialog_message_arcore_apk_old">最新のARCoreをインストールいただく必要があります。</string>
+    <string name="dialog_title_arcore_sdk_old">@string/dialog_title_confirm</string>
+    <string name="dialog_message_arcore_sdk_old">ご利用の端末のOSバージョンでは非対応になります。</string>
+    <string name="dialog_title_arcore_incompatible">@string/dialog_title_confirm</string>
+    <string name="dialog_message_arcore_incompatible">お使いの端末は非対応の端末になります。</string>
+    <string name="dialog_title_delete_image">@string/dialog_title_confirm</string>
+    <string name="dialog_message_delete_image">この画像を削除しますか?</string>
+    <string name="dialog_title_survey">アンケート</string>
+    <string name="dialog_message_survey">お客様のご意見をお聞かせください。\n「はい」を押下するとアンケート画面に遷移します。</string>
+
+    <string name="permission_title">"権限許可のお願い"</string>
+    <string name="permission_description">"ARカメラをご利用になるには、カメラおよび外部ストレージへのアクセス権限をONに変更いただく必要があります。"</string>
+    <string name="permission_denied_description">"このアプリを使用するためには、カメラの使用権限と外部ストレージの書き込み権限が必要です。ご自身でアプリの権限を許可していただく必要があります。"</string>
+    <string name="permission_name_camera">"カメラ"</string>
+    <string name="permission_name_camera_description">"カメラ"</string>
+    <string name="permission_name_storage">"ストレージ"</string>
+    <string name="permission_name_storage_description">"端末上の写真"</string>
+    <string name="dialog_message_permission_denied">"「%2$s」のアクセスが拒否されたため操作を中止しました。下記手順でアクセスを許可し再度お試しください。\n\n端末の[設定]>[アプリ]>[ARカメラ]>[許可]>「%1$s」をON"</string>
+    <string name="dialog_message_warning_external_storage_read_permission_denied">"端末内の楽曲をアラーム音に設定するためには、ストレージのアクセス権限をONに変更いただく必要があります。"</string>
+
+    <string name="button_check_again">もう一度確認する</string>
+    <string name="button_app_finish">アプリ終了</string>
+    <string name="button_finish">終了する</string>
+    <string name="button_close">"閉じる"</string>
+    <string name="button_next">次へ</string>
+    <string name="button_reload">更新</string>
+    <string name="button_open_setting">設定を開く</string>
+
+    <string name="share_image_not_found">画像が見つかりませんでした</string>
+    <string name="share_app_not_hound">シェアできるアプリケーションが見つかりませんでした</string>
+
+    <!-- application settings -->
+    <string name="secret_key">secret_key</string>
+    <string name="iv">iv</string>
+</resources>

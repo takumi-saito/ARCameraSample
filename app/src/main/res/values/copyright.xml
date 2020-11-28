@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <array name="licenses">
+        <item>@array/timber_license</item>
+        <item>@array/rxjava_license</item>
+        <item>@array/rxandroid_license</item>
+        <item>@array/stetho_license</item>
+        <item>@array/leakcanary_license</item>
+        <item>@array/glide_license</item>
+        <item>@array/orma_license</item>
+        <item>@array/se_license</item>
+    </array>
+
+    <string-array name="timber_license">
+        <item>@string/timber_license_title</item>
+        <item>@string/timber_license_link</item>
+        <item>@string/timber_license_message</item>
+    </string-array>
+
+    <string-array name="rxjava_license">
+        <item>@string/rxjava_license_title</item>
+        <item>@string/rxjava_license_link</item>
+        <item>@string/rxjava_license_message</item>
+    </string-array>
+
+    <string-array name="rxandroid_license">
+        <item>@string/rxandroid_license_title</item>
+        <item>@string/rxandroid_license_link</item>
+        <item>@string/rxandroid_license_message</item>
+    </string-array>
+
+    <string-array name="stetho_license">
+        <item>@string/stetho_license_title</item>
+        <item>@string/stetho_license_link</item>
+        <item>@string/stetho_license_message</item>
+    </string-array>
+
+    <string-array name="leakcanary_license">
+        <item>@string/leakcanary_license_title</item>
+        <item>@string/leakcanary_license_link</item>
+        <item>@string/leakcanary_license_message</item>
+    </string-array>
+
+    <string-array name="glide_license">
+        <item>@string/glide_license_title</item>
+        <item>@string/glide_license_link</item>
+        <item>@string/glide_license_message</item>
+    </string-array>
+
+    <string-array name="orma_license">
+        <item>@string/orma_license_title</item>
+        <item>@string/orma_license_link</item>
+        <item>@string/orma_license_message</item>
+    </string-array>
+
+    <string-array name="se_license">
+        <item>@string/se_license_title</item>
+        <item>@string/se_license_link</item>
+        <item>@string/se_license_message</item>
+    </string-array>
+
+    <string name="timber_license_title">
+        <![CDATA[
+            ・Timber
+            ]]>
+    </string>
+    <string name="timber_license_link">
+            https://github.com/JakeWharton/timber
+    </string>
+    <string name="timber_license_message">
+        <![CDATA[
+            Copyright 2013 Jake Wharton<br>
+            <br>
+            Licensed under the Apache License, Version 2.0 (the "License");<br>
+            you may not use this file except in compliance with the License.<br>
+            You may obtain a copy of the License at<br>
+            <br>
+               http://www.apache.org/licenses/LICENSE-2.0<br>
+            <br>
+            Unless required by applicable law or agreed to in writing, software<br>
+            distributed under the License is distributed on an "AS IS" BASIS,<br>
+            WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.<br>
+            See the License for the specific language governing permissions and<br>
+            limitations under the License.
+        ]]>
+    </string>
+
+    <string name="rxjava_license_title">
+        <![CDATA[
+            ・RxJava2
+            ]]>
+    </string>
+    <string name="rxjava_license_link">
+        https://github.com/ReactiveX/rxjava
+    </string>
+    <string name="rxjava_license_message">
+        <![CDATA[
+            Copyright (c) 2016-present, RxJava Contributors.<br>
+            <br>
+            Licensed under the Apache License, Version 2.0 (the "License");<br>
+            you may not use this file except in compliance with the License.<br>
+            You may obtain a copy of the License at<br>
+            <br>
+            http://www.apache.org/licenses/LICENSE-2.0<br>
+            <br>
+            Unless required by applicable law or agreed to in writing, software<br>
+            distributed under the License is distributed on an "AS IS" BASIS,<br>
+            WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.<br>
+            See the License for the specific language governing permissions and<br>
+            limitations under the License.<br>
+        ]]>
+    </string>
+
+    <string name="rxandroid_license_title">
+        <![CDATA[
+            ・RxAndroid
+            ]]>
+    </string>
+    <string name="rxandroid_license_link">
+        https://github.com/ReactiveX/RxAndroid
+    </string>
+    <string name="rxandroid_license_message">
+        <![CDATA[
+            Copyright 2015 The RxAndroid authors<br>
+            <br>
+            Licensed under the Apache License, Version 2.0 (the "License");<br>
+            you may not use this file except in compliance with the License.<br>
+            You may obtain a copy of the License at<br>
+            <br>
+                http://www.apache.org/licenses/LICENSE-2.0<br>
+            <br>
+            Unless required by applicable law or agreed to in writing, software<br>
+            distributed under the License is distributed on an "AS IS" BASIS,<br>
+            WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.<br>
+            See the License for the specific language governing permissions and<br>
+            limitations under the License.<br>
+        ]]>
+    </string>
+
+    <string name="stetho_license_title">
+        <![CDATA[
+            ・Stetho
+            ]]>
+    </string>
+    <string name="stetho_license_link">
+        https://facebook.github.io/stetho/
+    </string>
+    <string name="stetho_license_message">
+        <![CDATA[
+            BSD License<br>
+            <br>
+            For Stetho software<br>
+            <br>
+            Copyright (c) 2015, Facebook, Inc. All rights reserved.<br>
+            <br>
+            Redistribution and use in source and binary forms, with or without modification,<br>
+            are permitted provided that the following conditions are met:<br>
+            <br>
+             * Redistributions of source code must retain the above copyright notice, this<br>
+               list of conditions and the following disclaimer.<br>
+            <br>
+             * Redistributions in binary form must reproduce the above copyright notice,<br>
+               this list of conditions and the following disclaimer in the documentation<br>
+               and/or other materials provided with the distribution.<br>
+            <br>
+             * Neither the name Facebook nor the names of its contributors may be used to<br>
+               endorse or promote products derived from this software without specific<br>
+               prior written permission.<br>
+            <br>
+            THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND<br>
+            ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED<br>
+            WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE<br>
+            DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR<br>
+            ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES<br>
+            (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;<br>
+            LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON<br>
+            ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT<br>
+            (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS<br>
+            SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+        ]]>
+    </string>
+
+    <string name="leakcanary_license_title">
+        <![CDATA[
+            ・leakcanary
+            ]]>
+    </string>
+    <string name="leakcanary_license_link">
+        https://facebook.github.io/stetho/
+    </string>
+    <string name="leakcanary_license_message">
+        <![CDATA[
+            Copyright 2015 Square, Inc.<br>
+            <br>
+            Licensed under the Apache License, Version 2.0 (the "License");<br>
+            you may not use this file except in compliance with the License.<br>
+            You may obtain a copy of the License at<br>
+            <br>
+               http://www.apache.org/licenses/LICENSE-2.0<br>
+            <br>
+            Unless required by applicable law or agreed to in writing, software<br>
+            distributed under the License is distributed on an "AS IS" BASIS,<br>
+            WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.<br>
+            See the License for the specific language governing permissions and<br>
+            limitations under the License.
+        ]]>
+    </string>
+
+    <string name="glide_license_title">
+        <![CDATA[
+            ・glide
+            ]]>
+    </string>
+    <string name="glide_license_link">
+        https://github.com/bumptech/glide
+    </string>
+    <string name="glide_license_message">
+        <![CDATA[
+                     License for everything not in third_party and not otherwise marked:<br>
+            <br>
+            Copyright 2014 Google, Inc. All rights reserved.<br>
+            <br>
+            Redistribution and use in source and binary forms, with or without modification, are<br>
+            permitted provided that the following conditions are met:<br>
+            <br>
+               1. Redistributions of source code must retain the above copyright notice, this list of<br>
+                     conditions and the following disclaimer.<br>
+            <br>
+               2. Redistributions in binary form must reproduce the above copyright notice, this list<br>
+                     of conditions and the following disclaimer in the documentation and/or other materials<br>
+                     provided with the distribution.<br>
+            <br>
+            THIS SOFTWARE IS PROVIDED BY GOOGLE, INC. ``AS IS\'\' AND ANY EXPRESS OR IMPLIED<br>
+            WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND<br>
+            FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL GOOGLE, INC. OR<br>
+            CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR<br>
+            CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR<br>
+            SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON<br>
+            ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING<br>
+            NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF<br>
+            ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.<br>
+            <br>
+            The views and conclusions contained in the software and documentation are those of the<br>
+            authors and should not be interpreted as representing official policies, either expressed<br>
+            or implied, of Google, Inc.<br>
+            ---------------------------------------------------------------------------------------------<br>
+            License for third_party/disklrucache:<br>
+            <br>
+            Copyright 2012 Jake Wharton<br>
+            Copyright 2011 The Android Open Source Project<br>
+            <br>
+            Licensed under the Apache License, Version 2.0 (the "License");<br>
+            you may not use this file except in compliance with the License.<br>
+            You may obtain a copy of the License at<br>
+            <br>
+               http://www.apache.org/licenses/LICENSE-2.0<br>
+            <br>
+            Unless required by applicable law or agreed to in writing, software<br>
+            distributed under the License is distributed on an "AS IS" BASIS,<br>
+            WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.<br>
+            See the License for the specific language governing permissions and<br>
+            limitations under the License.<br>
+            ---------------------------------------------------------------------------------------------<br>
+            License for third_party/gif_decoder:<br>
+            <br>
+            Copyright (c) 2013 Xcellent Creations, Inc.<br>
+            <br>
+            Permission is hereby granted, free of charge, to any person obtaining<br>
+            a copy of this software and associated documentation files (the<br>
+            "Software"), to deal in the Software without restriction, including<br>
+            without limitation the rights to use, copy, modify, merge, publish,<br>
+            distribute, sublicense, and/or sell copies of the Software, and to<br>
+            permit persons to whom the Software is furnished to do so, subject to<br>
+            the following conditions:<br>
+            <br>
+            The above copyright notice and this permission notice shall be<br>
+            included in all copies or substantial portions of the Software.<br>
+            <br>
+            THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,<br>
+            EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF<br>
+            MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND<br>
+            NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE<br>
+            LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION<br>
+            OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION<br>
+            WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.<br>
+            ---------------------------------------------------------------------------------------------<br>
+            License for third_party/gif_encoder/AnimatedGifEncoder.java and<br>
+            third_party/gif_encoder/LZWEncoder.java:<br>
+            <br>
+            No copyright asserted on the source code of this class. May be used for any<br>
+            purpose, however, refer to the Unisys LZW patent for restrictions on use of<br>
+            the associated LZWEncoder class. Please forward any corrections to<br>
+            kweiner@fmsware.com.<br>
+            <br>
+            -----------------------------------------------------------------------------<br>
+            License for third_party/gif_encoder/NeuQuant.java<br>
+            <br>
+            Copyright (c) 1994 Anthony Dekker<br>
+            <br>
+            NEUQUANT Neural-Net quantization algorithm by Anthony Dekker, 1994. See<br>
+            "Kohonen neural networks for optimal colour quantization" in "Network:<br>
+            Computation in Neural Systems" Vol. 5 (1994) pp 351-367. for a discussion of<br>
+            the algorithm.<br>
+            <br>
+            Any party obtaining a copy of these files from the author, directly or<br>
+            indirectly, is granted, free of charge, a full and unrestricted irrevocable,<br>
+            world-wide, paid up, royalty-free, nonexclusive right and license to deal in<br>
+            this software and documentation files (the "Software"), including without<br>
+            limitation the rights to use, copy, modify, merge, publish, distribute,<br>
+            sublicense, and/or sell copies of the Software, and to permit persons who<br>
+            receive copies from any such party to do so, with the only requirement being<br>
+            that this copyright notice remain intact.
+        ]]>
+    </string>
+
+    <string name="orma_license_title">
+        <![CDATA[
+            ・Android-Orma
+            ]]>
+    </string>
+    <string name="orma_license_link">
+        https://github.com/maskarade/Android-Orma
+    </string>
+    <string name="orma_license_message">
+        <![CDATA[
+            Copyright (c) 2015 FUJI Goro (gfx).<br>
+            <br>
+            Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at<br>
+            <br>
+            http://www.apache.org/licenses/LICENSE-2.0<br>
+            <br>
+            Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.
+        ]]>
+    </string>
+
+    <string name="se_license_title">
+        <![CDATA[
+            ・sound effect
+            ]]>
+    </string>
+    <string name="se_license_link">
+        http://musicisvfr.com/
+    </string>
+    <string name="se_license_message">
+        <![CDATA[
+           素材提供：Music is VFR<br>
+        ]]>
+    </string>
+</resources>

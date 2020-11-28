@@ -1,0 +1,45 @@
+apply plugin: 'com.android.application'
+
+// APK作成用カスタムタスク
+task makeApkDevelopDebug(type: CommandExecTask) {
+    group = 'ar_camera'
+    buildVariant = 'assembleDevelopDebug'
+}
+
+// コマンド実行タスク作成タスククラス
+class CommandExecTask extends DefaultTask {
+    String buildVariant = null
+
+    @TaskAction
+    def action() {
+        project.exec {
+            if (buildVariant != null) {
+                if (System.getProperty('os.name').toLowerCase().contains('windows')) {
+                    commandLine 'cmd', '/c', '..\\gradlew.bat', 'clean', buildVariant
+                } else {
+                    commandLine '.././gradlew', 'clean', buildVariant
+                }
+            }
+        }
+    }
+}
+
+task makeApkRelease(type: ReleaseCommandExecTask) {
+    group = 'ar_camera'
+}
+
+// リリース用APK作成専用タスククラス
+class ReleaseCommandExecTask extends DefaultTask {
+    String buildVariant = null
+
+    @TaskAction
+    def action() {
+        project.exec {
+            if (System.getProperty('os.name').toLowerCase().contains('windows')) {
+                commandLine 'cmd', '/c', '..\\gradlew.bat', 'clean', 'assembleDevelopDebug', 'assembleProductRelease'
+            } else {
+                commandLine '.././gradlew', 'clean', 'assembleDevelopDebug', 'assembleProductRelease'
+            }
+        }
+    }
+}

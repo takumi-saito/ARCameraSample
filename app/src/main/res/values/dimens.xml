@@ -1,0 +1,30 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="line_height">3dp</dimen>
+    <dimen name="base_text_size">15.7dp</dimen>
+
+    <dimen name="default_spacing_none">0dp</dimen>
+    <dimen name="default_spacing_small">4dp</dimen>
+    <dimen name="default_spacing_medium">8dp</dimen>
+    <dimen name="default_spacing_huge">128dp</dimen>
+
+    <dimen name="toolbar_button_line_small">1dp</dimen>
+    <dimen name="toolbar_ripple_corner_radius_normal">100dp</dimen>
+
+    <dimen name="top_icon_height">48dp</dimen>
+    <dimen name="top_icon_width">48dp</dimen>
+
+    <!-- term dialog -->
+    <dimen name="term_height">500dp</dimen>
+    <dimen name="term_child_height">325dp</dimen>
+    <dimen name="term_title_padding_top">5dp</dimen>
+    <dimen name="term_title_image">32dp</dimen>
+    <dimen name="term_title_image_margin">20dp</dimen>
+    <dimen name="term_small_margin">8dp</dimen>
+    <dimen name="term_middle_margin">16dp</dimen>
+    <dimen name="term_large_margin">24dp</dimen>
+
+    <!-- how_to -->
+    <dimen name="how_to_small_margin">8dp</dimen>
+    <dimen name="how_to_middle_margin">16dp</dimen>
+</resources>

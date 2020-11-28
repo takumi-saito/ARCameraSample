@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+>
+
+    <!--<android.support.v7.widget.Toolbar-->
+        <!--android:id="@+id/tool_bar"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:minHeight="?attr/actionBarSize"-->
+        <!--android:background="?attr/colorPrimary">-->
+    <!--</android.support.v7.widget.Toolbar>-->
+
+    <RelativeLayout
+        android:id="@+id/fragment_container_parent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/fragment_navigation"
+    >
+
+        <!-- アニメーション(読み取り中) -->
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="20dp"
+        />
+
+        <!-- コンテンツ領域 -->
+        <FrameLayout
+            android:id="@+id/fragment_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </RelativeLayout>
+
+    <!-- フッター領域 -->
+    <FrameLayout
+        android:id="@+id/fragment_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+    />
+</RelativeLayout>

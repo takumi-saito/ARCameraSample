@@ -1,0 +1,58 @@
+/*
+ * Copyright 2017 Google Inc. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+package t_saito.ar.camera.activity;
+
+
+import android.os.Bundle;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
+
+import io.reactivex.Observable;
+import io.reactivex.disposables.Disposable;
+import t_saito.ar.camera.fragment.ArCameraFragment;
+import t_saito.ar.camera.R;
+import timber.log.Timber;
+
+public class ArCameraActivity extends BaseActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        initView();
+    }
+
+    private void initView() {
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        FragmentTransaction transaction = fragmentManager.beginTransaction();
+        transaction.replace(R.id.fragment_container, ArCameraFragment.newInstance(), ArCameraFragment.class.getSimpleName());
+        transaction.commit();
+    }
+
+    /**
+     * fragmentにバックキー操作を通知
+     */
+    @Override
+    public void onBackPressed() {
+        Disposable disposable = Observable.fromIterable (getSupportFragmentManager().getFragments())
+                .filter(Fragment::isVisible)
+                .filter(fragment -> fragment instanceof ArCameraFragment)
+                .subscribe(fragment -> ((ArCameraFragment) fragment).onBackPressed(), Timber::w);
+        disposable.dispose();
+        finishApplication();
+    }
+}

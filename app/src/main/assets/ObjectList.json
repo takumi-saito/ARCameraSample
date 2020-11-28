@@ -1,0 +1,12 @@
+[
+    {
+        "imageName": "labo.png",
+        "objectName": "labo.obj",
+        "textureName": "laboTexture.png"
+    },
+    {
+        "imageName": "wbf2017.png",
+        "objectName": "wbf2017.obj",
+        "textureName": "wbf2017Texture.png"
+    }
+]

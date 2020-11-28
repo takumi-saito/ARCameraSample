@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+
+    <data>
+        <variable
+            name="image"
+            type="t_saito.ar.camera.model.Image"/>
+        <variable
+            name="putStatus"
+            type="t_saito.ar.camera.viewmodel.ArCameraViewModel" />
+        <variable
+            name="viewModel"
+            type="t_saito.ar.camera.viewmodel.ArCameraViewModel" />
+    </data>
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".fragment.ArCameraFragment"
+        >
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <android.opengl.GLSurfaceView
+                android:id="@+id/surface_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                />
+            <View
+                android:id="@+id/view_white_out"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#FFFFFF"
+                android:alpha="0.0"
+                android:visibility="visible"
+                />
+        </FrameLayout>
+
+
+        <ImageButton
+            android:id="@+id/button_settings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:src="@drawable/ic_settings"
+            android:background="@android:color/transparent"
+            android:onClick="@{viewModel.onSettingsClicked}"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            />
+
+        <!-- flash light *ARCore未対応(ARCore対応後に実装) -->
+        <ImageButton
+            android:id="@+id/button_flush_light"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:background="@android:color/transparent"
+            android:visibility="gone"
+            android:onClick="@{v -> viewModel.onFlushLightClicked(v, viewModel.flashLightObservableField)}"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/button_settings"
+            android:src="@{viewModel.flashLightObservableField ? @drawable/ic_flash_on_white : @drawable/ic_flash_off_white}"
+        />
+
+        <ImageButton
+            android:id="@+id/button_pin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:background="@android:color/transparent"
+            android:visibility="visible"
+            android:onClick="@{v -> viewModel.onPinClicked(v, viewModel.pinObservableField)}"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/button_flush_light"
+            android:src="@{viewModel.pinObservableField ? @drawable/ic_pin_on : @drawable/ic_pin_off}"
+            />
+
+        <ImageButton
+            android:id="@+id/button_reset"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:src="@drawable/ic_replay"
+            android:background="@android:color/transparent"
+            android:layout_marginRight="10dp"
+            android:visibility="gone"
+            android:onClick="@{viewModel.onResetClicked}"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/button_pin"
+            />
+
+        <RelativeLayout
+            android:id="@+id/layout_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:background="@android:color/transparent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            >
+            <ImageButton
+                android:id="@+id/button_object"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:padding="20dp"
+                android:src="@drawable/ic_add_circle_outline"
+                android:scaleType="fitCenter"
+                android:background="@android:color/transparent"
+                android:layout_centerVertical="true"
+                android:layout_alignParentEnd="true"
+                android:onClick="@{viewModel.onObjectClicked}"
+                />
+
+            <Button
+                android:id="@+id/button_capture"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:padding="30dp"
+                android:layout_centerInParent="true"
+                style="@style/Base.Widget.AppCompat.Button.Borderless"
+                android:background="@drawable/selector_capture_button"
+                android:onClick="@{viewModel.onCaptureClicked}"
+                />
+
+            <ImageButton
+                android:id="@+id/button_picture"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentStart="true"
+                android:padding="20dp"
+                android:scaleType="centerCrop"
+                android:background="@color/transparent_background"
+                android:onClick="@{viewModel.onPictureClicked}"
+                />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/layout_object"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:visibility="gone"
+            android:background="@color/transparent_background"
+            android:onClick="@{viewModel.onLayoutObjectClicked}"
+            >
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="240dp"
+                android:layout_alignParentBottom="true"
+                android:background="@color/transparent_background_white"
+                >
+
+            </android.support.v7.widget.RecyclerView>
+        </RelativeLayout>
+    </android.support.constraint.ConstraintLayout>
+</layout>

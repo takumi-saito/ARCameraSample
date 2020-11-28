@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+        <variable
+            name="settingsTitle"
+            type="t_saito.ar.camera.model.SettingsTitle"/>
+        <variable
+            name="listener"
+            type="t_saito.ar.camera.viewmodel.ItemSettingsClickListener"/>
+    </data>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/item_settings_layout"
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    android:clickable="true"
+    android:focusable="true"
+    android:foreground="@drawable/ripple_custom"
+    android:background="@drawable/ripple_custom"
+    android:onClick="@{v -> listener.onClickSettings(v, settingsTitle)}"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp">
+
+    <TextView
+        android:id="@+id/item_settings_text_title"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical"
+        android:ellipsize="end"
+        android:paddingBottom="16dp"
+        android:paddingTop="16dp"
+        android:textSize="@dimen/base_text_size"
+        android:maxLines="1"
+        android:textColor="@color/base_text_color"
+        android:text="@{settingsTitle.title}"
+        tools:text="ヘルプ"
+        />
+
+    <ImageView
+        android:id="@+id/item_menu_image_next"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_centerVertical="true"
+        android:scaleType="centerCrop"
+        android:layout_gravity="center_vertical"
+        android:contentDescription="@null"
+        android:layout_alignParentRight="true"
+        android:paddingBottom="16dp"
+        android:paddingTop="16dp"
+        app:srcCompat="@drawable/ic_keyboard_arrow_right_grey_600_36dp"/>
+</RelativeLayout>
+</layout>

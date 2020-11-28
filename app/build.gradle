@@ -1,0 +1,164 @@
+apply plugin: 'com.android.application'
+
+def revisionHash = 'git rev-parse --short HEAD'.execute(null, project.rootDir).in.text.trim();
+
+android {
+    compileSdkVersion 27
+    buildToolsVersion '27.0.3'
+    defaultConfig {
+        applicationId PACKAGE_NAME
+        minSdkVersion 24
+        targetSdkVersion 27
+
+        // アプリバージョンコード
+        versionCode getProperty("version_code").toInteger()
+        // アプリバージョン名
+        versionName getProperty("version_name")
+        // リビジョン
+        buildConfigField('String', 'REVISION_HASH', '"' + revisionHash + '"')
+        vectorDrawables.useSupportLibrary = true
+    }
+
+    buildTypes {
+        // デバッグ
+        debug {
+            // デバッグ可能
+            debuggable true
+            // ログ出力有効
+            buildConfigField "boolean", "LOG_ENABLE", "true"
+            // エミュレータ設定無効
+            buildConfigField "boolean", "EMULATOR", "false"
+            // ProGuard設定無効
+            minifyEnabled false
+            // デバッグ署名
+            signingConfig signingConfigs.debug
+        }
+    }
+
+    dataBinding {
+        enabled = true
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    flavorDimensions "env"
+
+    productFlavors {
+        // 開発
+        dev {
+            dimension DIMENSION_ENV
+            applicationId PACKAGE_NAME_DEV
+        }
+
+        pro {
+            dimension DIMENSION_ENV
+            applicationId PACKAGE_NAME
+        }
+    }
+
+    // 署名設定
+    signingConfigs {
+        // デバッグ
+        debug {
+            storeFile file("../keystore/debug.jks")
+            storePassword KEYSTORE_PASSWORD_DEV
+            keyAlias "androiddebugkey"
+            keyPassword KEYSTORE_PASSWORD_DEV
+        }
+    }
+
+    // ビルド時の処理
+    applicationVariants.all { variant ->
+        variant.outputs.all { output ->
+            def apkName
+            def apkDate = new java.text.SimpleDateFormat("yyMMdd").format(new Date())
+            def buildType = variant.buildType
+            switch (buildType.name) {
+                case "release":
+                    apkName = "ar_camera_${apkDate}_code${versionCode}"
+                    break
+                case "debug":
+                default:
+                    apkName = "ar_camera_${variant.productFlavors[0].name}_${buildType.name}_${apkDate}_code${versionCode}"
+                    variant.buildType
+                    break
+            }
+
+            if (variant.signingConfig == null) {
+                // 無署名の場合は[-unsigned]を付与
+                apkName += "-unsigned"
+            }
+            // 拡張子を付与
+            apkName += ".apk"
+
+            // 作成したファイル名でAPKを出力する
+            outputFileName = apkName
+        }
+    }
+}
+
+repositories {
+    flatDir {
+        dirs './libs'
+    }
+    maven { url 'https://maven.fabric.io/public' }
+}
+
+ext {
+    // libs var
+    androidSupportVer = '27.0.2'
+    constraintLayoutVer = '1.1.0'
+    arcoreVer = '1.2.1'
+    javaglVer = '0.2.1'
+    rxjavaVer = '2.1.13'
+    rxandroidVer = '2.0.2'
+    rxpermissionsVer = '0.9.5'
+    timberVer = '4.7.0'
+    stethoVer = '1.5.0'
+    leakcanaryVer = '1.5.4'
+    glideVer = '3.7.0'
+    glideCompilerVer = '4.7.1'
+    ormaVer = '4.2.5'
+    gsonVer = '2.8.4'
+    firebaseSdkVer = '16.0.1'
+    crashlyticsSdkVer = '2.9.4'
+    answersSdkVer = '1.4.2'
+}
+dependencies {
+    // ARCore library
+    implementation "com.google.ar:core:$arcoreVer"
+
+    // Obj - a simple Wavefront OBJ file loader
+    // https://github.com/javagl/Obj
+    implementation "de.javagl:obj:$javaglVer"
+
+    // android support library
+    implementation "com.android.support:appcompat-v7:$androidSupportVer"
+    implementation "com.android.support:support-v4:$androidSupportVer"
+    implementation "com.android.support:design:$androidSupportVer"
+    implementation "com.android.support.constraint:constraint-layout:$constraintLayoutVer"
+    implementation "io.reactivex.rxjava2:rxjava:$rxjavaVer"
+    implementation "io.reactivex.rxjava2:rxandroid:$rxandroidVer"
+    // permission
+    implementation "com.tbruyelle.rxpermissions2:rxpermissions:${rxpermissionsVer}@aar"
+    // log
+    implementation "com.jakewharton.timber:timber:$timberVer"
+    // debug
+    implementation "com.facebook.stetho:stetho:$stethoVer"
+    // memory
+    debugImplementation "com.squareup.leakcanary:leakcanary-android:$leakcanaryVer"
+    releaseImplementation "com.squareup.leakcanary:leakcanary-android-no-op:$leakcanaryVer"
+    // glide
+    implementation "com.github.bumptech.glide:glide:$glideVer"
+    annotationProcessor "com.github.bumptech.glide:compiler:$glideCompilerVer"
+    // db
+    annotationProcessor "com.github.gfx.android.orma:orma-processor:$ormaVer"
+    implementation "com.github.gfx.android.orma:orma:$ormaVer"
+    // gson
+    implementation "com.google.code.gson:gson:$gsonVer"
+}
+
+apply from: 'buildTask.gradle'

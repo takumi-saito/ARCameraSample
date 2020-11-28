@@ -1,0 +1,28 @@
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="viewModel"
+            type="t_saito.ar.camera.viewmodel.ImageGridViewModel" />
+    </data>
+    <android.support.design.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="t_saito.ar.camera.fragment.PicturesFragment">
+        <!-- ツールバー領域 -->
+        <include
+            android:id="@+id/toolbar_layout"
+            layout="@layout/toolbar_default" />
+
+        <t_saito.ar.camera.ui.GridRecyclerView
+            android:id="@+id/grid_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            >
+        </t_saito.ar.camera.ui.GridRecyclerView>
+
+    </android.support.design.widget.CoordinatorLayout>
+</layout>

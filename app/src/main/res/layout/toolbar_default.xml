@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    >
+    <data>
+        <import type="android.view.View" />
+        <variable
+            name="toolBarViewModel"
+            type="t_saito.ar.camera.viewmodel.ToolBarViewModel" />
+    </data>
+
+    <!-- ツールバー領域 -->
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimaryDark"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/transparent_background"
+            android:fitsSystemWindows="true"
+            app:contentInsetStart="0dp"
+            app:layout_collapseMode="pin"
+            app:layout_scrollFlags="scroll|enterAlways"
+            app:theme="@style/ThemeOverlay.AppCompat.ActionBar">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/toolbar_background">
+
+                <!-- 戻るボタン -->
+                <FrameLayout
+                    android:id="@+id/toolbar_back"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:visibility="@{toolBarViewModel.enableClose ? View.VISIBLE : View.INVISIBLE}"
+                    android:onClick="@{toolBarViewModel.onCloseClicked}"
+                >
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_margin="3dp"
+                        android:padding="10dp"
+                        android:background="@drawable/effect_ripple"
+                        android:duplicateParentState="true"
+                        android:contentDescription="@null"
+                        app:srcCompat="@drawable/ic_close_777777_24dp"
+                    />
+                </FrameLayout>
+
+                <!-- タイトル -->
+                <TextView
+                    android:id="@+id/toolbar_title"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="5"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:singleLine="true"
+                    android:textColor="@color/base_text_color"
+                    android:textSize="17dp"
+                    android:text="@{toolBarViewModel.title}"
+                    tools:text="title"
+                     />
+
+                <!-- 余白 -->
+                <FrameLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                >
+                    <View
+                        android:layout_height="match_parent"
+                        android:layout_width="match_parent"
+                    />
+                    <TextView
+                        android:id="@+id/toolbar_env"
+                        android:layout_height="match_parent"
+                        android:layout_width="match_parent"
+                        android:ellipsize="end"
+                        android:gravity="center"
+                        android:textColor="@color/base_text_color"
+                        android:textSize="12dp"
+                        tools:text="検証"
+                        />
+                </FrameLayout>
+            </LinearLayout>
+        </android.support.v7.widget.Toolbar>
+    </android.support.design.widget.AppBarLayout>
+</layout>
